@@ -38,17 +38,4 @@ public class FileIterator implements Iterator {
         }
         return null;
     }
-
-    public static void main(String[] args) {
-        FileIterator fileIterator = null;
-        try {
-            fileIterator = new FileIterator("resources/isapi_redirect-1.2.30.dll");
-            while(fileIterator.hasNext()) {
-                System.out.println(fileIterator.next());
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-
-    }
 }
