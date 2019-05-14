@@ -11,6 +11,10 @@ public class FileIterator implements Iterator {
         this.raf = new RandomAccessFile(file, "r");
     }
 
+    /**
+     * Returns true if the iteration has more elements.
+     * @return true if next would return a byte of file rather than throwing an exception
+     */
     @Override
     public boolean hasNext() {
         long fileLength = file.length();
@@ -18,6 +22,10 @@ public class FileIterator implements Iterator {
         return position < fileLength;
     }
 
+    /**
+     * Returns the next element in the iteration.
+     * @return next Byte of file in the interation
+     */
     @Override
     public Byte next() {
         if(this.hasNext()) {

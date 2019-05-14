@@ -19,6 +19,11 @@ public class ChecksumSHA1 implements IChecksumStrategy {
         return result;
     }
 
+    /**
+     * Calculates checksum of a file using SHA1 algorithm
+     * @param fileIterator of a file that's checksum will be calculated
+     * @return String with checksum of a file calculated with use of SHA1 algorithm
+     */
     @Override
     public String calculate(FileIterator fileIterator) {
         try {

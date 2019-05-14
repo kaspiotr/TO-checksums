@@ -9,6 +9,11 @@ public class ChecksumFile {
         this.fileIterator = fileIterator;
     }
 
+    /**
+     * Calculates checksum of a specified by FileIterator file instance according to given implementation
+     * of ICheckSumStrategy interface
+     * @return String with file's checksum
+     */
     public String calcSum() {
         return strategy.calculate(this.fileIterator);
     }
